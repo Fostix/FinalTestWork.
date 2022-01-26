@@ -6,7 +6,7 @@ if (number == 1)
 {
     Console.Write("Enter array length: ");
     int arrayLength = int.Parse(Console.ReadLine());
-    if (arrayLength > 0 | arrayLength < 21474833647)
+    if (arrayLength > 0 && arrayLength < 10000)
     {
         string[] array = new string[arrayLength];
         for (int i = 0; i < array.Length; i++)
@@ -20,6 +20,10 @@ if (number == 1)
         Console.WriteLine();
         Console.Write("New array: ");
         PrintArray(newArray);
+    }
+    else
+    {
+        Console.WriteLine("you entered too large a value or less than one value");
     }
 }
 
@@ -44,27 +48,19 @@ string[] Method(string[] array)
 {
     string sizeWord;
     int sizeNewArray = 0;
-    for (int i = 0; i < array.Length; i++)
-    {
-        sizeWord = array[i];
-        if (sizeWord.Length <= 3)
-        {
-            sizeNewArray++;
-        }
-    }
 
-    string[] newArray = new string[sizeNewArray];
-    int index = 0;
+    string[] newArray = new string[array.Length];
 
     for (int row = 0; row < array.Length; row++)
     {
         sizeWord = array[row];
         if (sizeWord.Length <= 3)
         {
-            newArray[index] = array[row];
-            index++;
+            newArray[sizeNewArray] = array[row];
+            sizeNewArray++;
         }
     }
+    Array.Resize(ref newArray, sizeNewArray);
     return newArray;
 }
 
