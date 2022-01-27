@@ -1,12 +1,14 @@
 ﻿Console.Write("Enter number: ");
-int number = int.Parse(Console.ReadLine());
+int number = int.Parse(Console.ReadLine()),
+maxLengthArray = 10000,
+wordNoLongerThanThree = 3;
 
 
 if (number == 1)
 {
     Console.Write("Enter array length: ");
     int arrayLength = int.Parse(Console.ReadLine());
-    if (arrayLength > 0 && arrayLength < 10000)
+    if (arrayLength > 0 && arrayLength < maxLengthArray)
     {
         string[] array = new string[arrayLength];
         for (int i = 0; i < array.Length; i++)
@@ -54,7 +56,7 @@ string[] Method(string[] array)
     for (int row = 0; row < array.Length; row++)
     {
         sizeWord = array[row];
-        if (sizeWord.Length <= 3)
+        if (sizeWord.Length <= wordNoLongerThanThree)
         {
             newArray[sizeNewArray] = array[row];
             sizeNewArray++;
