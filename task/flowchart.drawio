@@ -490,7 +490,7 @@
         </mxGraphModel>
     </diagram>
     <diagram id="lp2k1k0jg0F1rQQ2SW79" name="Page-3">
-        <mxGraphModel dx="821" dy="584" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1100" pageHeight="850" math="0" shadow="0">
+        <mxGraphModel grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" page="1" fold="1" pageScale="1" pageWidth="1100" pageHeight="850" math="0" shadow="0">
             <root>
                 <mxCell id="E-IIn2uDhfkUTFJt89Ld-0"/>
                 <mxCell id="E-IIn2uDhfkUTFJt89Ld-1" parent="E-IIn2uDhfkUTFJt89Ld-0"/>
@@ -791,6 +791,53 @@
                 </mxCell>
                 <mxCell id="Bg0SzKkjc1vgcsSty883-0" value="number &amp;lt; 1" style="rhombus;whiteSpace=wrap;html=1;" vertex="1" parent="E-IIn2uDhfkUTFJt89Ld-1">
                     <mxGeometry x="848.75" y="1045" width="80" height="80" as="geometry"/>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+    <diagram id="AYmS1jj_uh3NJ_cBHHum" name="Page-4">
+        <mxGraphModel dx="1614" dy="790" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1100" pageHeight="850" math="0" shadow="0">
+            <root>
+                <mxCell id="ztf0ZhHF-pl2signdTAE-0"/>
+                <mxCell id="ztf0ZhHF-pl2signdTAE-1" parent="ztf0ZhHF-pl2signdTAE-0"/>
+                <mxCell id="ztf0ZhHF-pl2signdTAE-4" value="" style="edgeStyle=none;html=1;" edge="1" parent="ztf0ZhHF-pl2signdTAE-1" source="ztf0ZhHF-pl2signdTAE-2" target="ztf0ZhHF-pl2signdTAE-3">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="ztf0ZhHF-pl2signdTAE-2" value="EnterNumberChoice" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="ztf0ZhHF-pl2signdTAE-1">
+                    <mxGeometry x="990" y="40" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="ztf0ZhHF-pl2signdTAE-6" value="" style="edgeStyle=none;html=1;" edge="1" parent="ztf0ZhHF-pl2signdTAE-1" source="ztf0ZhHF-pl2signdTAE-3" target="ztf0ZhHF-pl2signdTAE-5">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="ztf0ZhHF-pl2signdTAE-3" value="stringNumber" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fixedSize=1;" vertex="1" parent="ztf0ZhHF-pl2signdTAE-1">
+                    <mxGeometry x="990" y="180" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="ztf0ZhHF-pl2signdTAE-8" value="true" style="edgeStyle=none;html=1;" edge="1" parent="ztf0ZhHF-pl2signdTAE-1" source="ztf0ZhHF-pl2signdTAE-5" target="ztf0ZhHF-pl2signdTAE-7">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="ztf0ZhHF-pl2signdTAE-5" value="try" style="rhombus;whiteSpace=wrap;html=1;" vertex="1" parent="ztf0ZhHF-pl2signdTAE-1">
+                    <mxGeometry x="1010" y="310" width="80" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="ztf0ZhHF-pl2signdTAE-10" value="" style="edgeStyle=none;html=1;" edge="1" parent="ztf0ZhHF-pl2signdTAE-1" source="ztf0ZhHF-pl2signdTAE-7" target="ztf0ZhHF-pl2signdTAE-9">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="ztf0ZhHF-pl2signdTAE-7" value="int number = Convert(stringNumber" style="whiteSpace=wrap;html=1;" vertex="1" parent="ztf0ZhHF-pl2signdTAE-1">
+                    <mxGeometry x="945" y="480" width="210" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="ztf0ZhHF-pl2signdTAE-12" value="true" style="edgeStyle=none;html=1;" edge="1" parent="ztf0ZhHF-pl2signdTAE-1" source="ztf0ZhHF-pl2signdTAE-9" target="ztf0ZhHF-pl2signdTAE-11">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="ztf0ZhHF-pl2signdTAE-9" value="number &amp;lt; 1 | number &amp;gt; 2" style="rhombus;whiteSpace=wrap;html=1;" vertex="1" parent="ztf0ZhHF-pl2signdTAE-1">
+                    <mxGeometry x="970" y="610" width="160" height="110" as="geometry"/>
+                </mxCell>
+                <mxCell id="ztf0ZhHF-pl2signdTAE-14" value="" style="edgeStyle=none;html=1;" edge="1" parent="ztf0ZhHF-pl2signdTAE-1" source="ztf0ZhHF-pl2signdTAE-11" target="ztf0ZhHF-pl2signdTAE-13">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="ztf0ZhHF-pl2signdTAE-11" value="number = 3" style="whiteSpace=wrap;html=1;" vertex="1" parent="ztf0ZhHF-pl2signdTAE-1">
+                    <mxGeometry x="990" y="825" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="ztf0ZhHF-pl2signdTAE-13" value="&#10;&#10;&lt;div style=&quot;color: rgb(255, 255, 255); background-color: rgb(0, 0, 0); font-family: consolas, &amp;quot;courier new&amp;quot;, monospace; font-weight: normal; font-size: 14px; line-height: 19px;&quot;&gt;&lt;div&gt;&lt;span style=&quot;color: #ce9178&quot;&gt;Insert a nubmer more than 1:&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&#10;&#10;" style="shape=document;whiteSpace=wrap;html=1;boundedLbl=1;" vertex="1" parent="ztf0ZhHF-pl2signdTAE-1">
+                    <mxGeometry x="990" y="955" width="120" height="80" as="geometry"/>
                 </mxCell>
             </root>
         </mxGraphModel>

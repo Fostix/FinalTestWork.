@@ -9,7 +9,7 @@ do
         if (number > 2 | number < 1)
         {
             number = 3;
-            Console.Write("Insert a nubmer more than 1: ");
+            Console.Write("Insert a nubmer 1 or 2: ");
 
         }
     }
