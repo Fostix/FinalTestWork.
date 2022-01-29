@@ -2,10 +2,10 @@
 int number;
 do
 {
-    string strNumber = Console.ReadLine();
+    string stringNumber = Console.ReadLine();
     try
     {
-        number = Convert.ToInt32(strNumber);
+        number = Convert.ToInt32(stringNumber);
         if (number > 2 | number < 1)
         {
             number = 3;
@@ -20,17 +20,35 @@ do
         Console.Write("Renter number: ");
     }
 } while (number != 1 & number != 2);
-
-
 int maxLengthArray = 10000,
 wordNoLongerThanThree = 3;
-
 
 
 if (number == 1)
 {
     Console.Write("Enter array length: ");
-    int arrayLength = int.Parse(Console.ReadLine());
+    //int arrayLength = int.Parse(Console.ReadLine());
+    int arrayLength;
+    do
+    {
+        string stringArrayLength = Console.ReadLine();
+        try
+        {
+            arrayLength = Convert.ToInt32(stringArrayLength);
+            if (arrayLength < 1 && arrayLength == 0)
+            {
+                Console.Write("Renter number: ");
+                arrayLength = -1;
+            }
+        }
+        catch (Exception)
+        {
+            Console.Write("incorrect: ");
+            arrayLength = -1;
+        }
+    } while (number > 1);
+
+
     if (arrayLength > 0 && arrayLength < maxLengthArray)
     {
         string[] array = new string[arrayLength];
@@ -46,10 +64,10 @@ if (number == 1)
         Console.Write("New array: ");
         PrintArray(newArray);
     }
-    else
-    {
-        Console.WriteLine("you entered too large a value or less than one value");
-    }
+    // else
+    // {
+    //     Console.WriteLine("you entered too large a value or less than one value");
+    // }
 }
 
 else if (number == 2)
