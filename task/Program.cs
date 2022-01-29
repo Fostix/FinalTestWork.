@@ -38,13 +38,12 @@ if (number == 1)
             if (arrayLength < 1 && arrayLength == 0)
             {
                 Console.Write("Renter number: ");
-                arrayLength = -1;
             }
         }
         catch (Exception)
         {
-            Console.Write("incorrect: ");
             arrayLength = -1;
+            Console.Write("incorrect: ");
         }
     } while (number > 1);
 
@@ -54,7 +53,7 @@ if (number == 1)
         string[] array = new string[arrayLength];
         for (int i = 0; i < array.Length; i++)
         {
-            Console.Write("Enter word(s) through space: ");
+            Console.Write($"Enter word {i + 1}: ");
             array[i] = Console.ReadLine();
         }
         string[] newArray = Method(array);
