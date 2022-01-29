@@ -1,7 +1,30 @@
 ﻿Console.Write("Enter number: ");
-int number = int.Parse(Console.ReadLine()),
-maxLengthArray = 10000,
+int number;
+do
+{
+    string strNumber = Console.ReadLine();
+    try
+    {
+        number = Convert.ToInt32(strNumber);
+        if (number > 2 | number < 1)
+        {
+            number = 3;
+            Console.Write("Renter number: ");
+
+        }
+    }
+    catch (Exception)
+    {
+
+        number = 3;
+        Console.Write("Renter number: ");
+    }
+} while (number != 1 & number != 2);
+
+
+int maxLengthArray = 10000,
 wordNoLongerThanThree = 3;
+
 
 
 if (number == 1)
