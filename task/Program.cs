@@ -1,33 +1,55 @@
-﻿Console.Write("Enter number: ");
-int number;
-do
-{
-    string stringNumber = Console.ReadLine();
-    try
-    {
-        number = Convert.ToInt32(stringNumber);
-        if (number > 2 | number < 1)
-        {
-            number = 3;
-            Console.Write("Insert a nubmer 1 or 2: ");
+﻿
+string[] array = new string[0];
 
-        }
-    }
-    catch (Exception)
-    {
-
-        number = 3;
-        Console.Write("Insert a nubmer: ");
-    }
-} while (number != 1 & number != 2);
-int maxLengthArray = 10000,
-wordNoLongerThanThree = 3;
-
-
+int number = EnterNumberChoice();
 if (number == 1)
 {
+    array = MethodEnterYourself();
+}
+else if(number == 2)
+{
+
+    array = ScriptMethod();
+}
+
+string[] newArray = NewArrayMethod(array);
+PrintArray(array);
+Console.WriteLine();
+PrintArray(newArray);
+
+
+
+
+int EnterNumberChoice()
+{
+    int number;
+    do
+    {
+        Console.Write("Enter natural number: ");
+        string stringNumber = Console.ReadLine();
+        try
+        {
+            number = Convert.ToInt32(stringNumber);
+            if (number < 1 | number > 2)
+            {
+                number = 3;
+                Console.Write("Insert a number 1 or 2: ");
+            }
+        }
+        catch (System.Exception)
+        {
+            number = 3;
+            Console.Write("Insert a number: ");
+        }
+
+    } while (number != 1 && number != 2);
+    return number;
+}
+
+
+string[] MethodEnterYourself()
+{
     Console.Write("Enter array length: ");
-    //int arrayLength = int.Parse(Console.ReadLine());
     int arrayLength;
     do
     {
@@ -37,69 +59,45 @@ if (number == 1)
             arrayLength = Convert.ToInt32(stringArrayLength);
             if (arrayLength < 1)
             {
-                arrayLength = -1;
-                Console.Write("array length cannot be negative number, enter another number: ");
+                Console.Write("Array length cannot be negative number, enter natural number: ");
             }
         }
-        catch (Exception)
+        catch (System.Exception)
         {
             arrayLength = -1;
             Console.Write("Enter number: ");
         }
     } while (arrayLength < 1);
 
-
-    if (arrayLength > 0 && arrayLength < maxLengthArray)
+    string[] array = new string[arrayLength];
+    for (int i = 0; i < array.Length; i++)
     {
-        string[] array = new string[arrayLength];
-        for (int i = 0; i < array.Length; i++)
-        {
-            Console.Write($"Enter word {i + 1}: ");
-            array[i] = Console.ReadLine();
-        }
-        string[] newArray = Method(array);
-        Console.Write("Old array: ");
-        PrintArray(array);
-        Console.WriteLine();
-        Console.Write("New array: ");
-        PrintArray(newArray);
+        Console.Write($"Enter word {i + 1}: ");
+        array[i] = Console.ReadLine();
     }
-    // else
-    // {
-    //     Console.WriteLine("you entered too large a value or less than one value");
-    // }
+    return array;
 }
 
-else if (number == 2)
+string[] ScriptMethod()
 {
     string[] array = { "hello", "2", "world", ":-)", "1234", "1567", "-2", "computer science", "Russia", "Denmark", "Kazan" };
-    string[] newArray = Method(array);
-    Console.Write("Old array: ");
-    PrintArray(array);
-    Console.WriteLine();
-    Console.Write("New array: ");
-    PrintArray(newArray);
+    return array;
 }
-// else
-// {
-//     Console.WriteLine("incorrect");
-// }
 
 
-
-string[] Method(string[] array)
+string[] NewArrayMethod(string[] oldArray)
 {
     string sizeWord;
-    int sizeNewArray = 0;
+    int sizeNewArray = 0,
+    wordNotLongerThanThree = 3;
 
-    string[] newArray = new string[array.Length];
-
-    for (int row = 0; row < array.Length; row++)
+    string[] newArray = new string[oldArray.Length];
+    for (int row = 0; row < oldArray.Length; row++)
     {
-        sizeWord = array[row];
-        if (sizeWord.Length <= wordNoLongerThanThree)
+        sizeWord = oldArray[row];
+        if (sizeWord.Length <= wordNotLongerThanThree)
         {
-            newArray[sizeNewArray] = array[row];
+            newArray[sizeNewArray] = oldArray[row];
             sizeNewArray++;
         }
     }
@@ -108,14 +106,10 @@ string[] Method(string[] array)
 }
 
 
-
-
-
-
 void PrintArray(string[] print)
 {
-    for (int row = 0; row < print.Length; row++)
+    for (int i = 0; i < print.Length; i++)
     {
-        Console.Write(print[row] + " ");
+        Console.WriteLine($" word {i + 1}: {print[i]}");
     }
 }
