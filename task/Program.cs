@@ -9,7 +9,7 @@ do
         if (number > 2 | number < 1)
         {
             number = 3;
-            Console.Write("Renter number: ");
+            Console.Write("Insert a nubmer more than 1: ");
 
         }
     }
@@ -17,7 +17,7 @@ do
     {
 
         number = 3;
-        Console.Write("Renter number: ");
+        Console.Write("Insert a nubmer: ");
     }
 } while (number != 1 & number != 2);
 int maxLengthArray = 10000,
@@ -45,7 +45,7 @@ if (number == 1)
             arrayLength = -1;
             Console.Write("incorrect: ");
         }
-    } while (number > 1);
+    } while (number < 1 & number != 1);
 
 
     if (arrayLength > 0 && arrayLength < maxLengthArray)
