@@ -35,17 +35,18 @@ if (number == 1)
         try
         {
             arrayLength = Convert.ToInt32(stringArrayLength);
-            if (arrayLength < 1 && arrayLength == 0)
+            if (arrayLength < 1)
             {
-                Console.Write("Renter number: ");
+                arrayLength = -1;
+                Console.Write("array length cannot be negative number, enter another number: ");
             }
         }
         catch (Exception)
         {
             arrayLength = -1;
-            Console.Write("incorrect: ");
+            Console.Write("Enter number: ");
         }
-    } while (number < 1 & number != 1);
+    } while (arrayLength < 1);
 
 
     if (arrayLength > 0 && arrayLength < maxLengthArray)
@@ -79,10 +80,10 @@ else if (number == 2)
     Console.Write("New array: ");
     PrintArray(newArray);
 }
-else
-{
-    Console.WriteLine("incorrect");
-}
+// else
+// {
+//     Console.WriteLine("incorrect");
+// }
 
 
 
