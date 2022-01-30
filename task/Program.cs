@@ -25,7 +25,7 @@ int EnterNumberChoice()
     int number;
     do
     {
-        Console.Write("Enter natural number: ");
+        Console.Write("Enter 1 if you wond enter yourself\n2 for skript\nnumber:  ");
         string stringNumber = Console.ReadLine();
         try
         {
