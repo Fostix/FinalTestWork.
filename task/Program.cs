@@ -22,7 +22,7 @@ PrintArray(newArray);
 
 int ChoiceEnterNumber()
 {
-    int number;
+    int number = 0;
     do
     {
         Console.Write("Enter 1 if you wont enter yourself\n2 for skript\nnumber:  ");
@@ -32,13 +32,11 @@ int ChoiceEnterNumber()
             number = Convert.ToInt32(stringNumber);
             if (number < 1 | number > 2)
             {
-                number = 0;
                 Console.Write("Insert a number 1 or 2: ");
             }
         }
         catch (System.Exception)
         {
-            number = 0;
             Console.Write("Insert a number: ");
         }
 
