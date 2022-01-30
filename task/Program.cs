@@ -6,7 +6,7 @@ if (number == 1)
 {
     array = MethodEnterYourself();
 }
-else if(number == 2)
+else if (number == 2)
 {
 
     array = ScriptMethod();
