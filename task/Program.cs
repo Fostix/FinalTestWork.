@@ -32,13 +32,13 @@ int EnterNumberChoice()
             number = Convert.ToInt32(stringNumber);
             if (number < 1 | number > 2)
             {
-                number = 3;
+                number = 0;
                 Console.Write("Insert a number 1 or 2: ");
             }
         }
         catch (System.Exception)
         {
-            number = 3;
+            number = 0;
             Console.Write("Insert a number: ");
         }
 
