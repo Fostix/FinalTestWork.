@@ -50,26 +50,26 @@ int ChoiceEnterNumber()
 string[] EnterYourselfMethod()
 {
     Console.Write("Enter array length: ");
-    int lengthArray;
+    int arrayLength;
     do
     {
-        string stringLengthArray = Console.ReadLine();
+        string stringArrayLength = Console.ReadLine();
         try
         {
-            lengthArray = Convert.ToInt32(stringLengthArray);
-            if (lengthArray < 1)
+            arrayLength = Convert.ToInt32(stringArrayLength);
+            if (arrayLength < 1)
             {
                 Console.Write("Array length cannot be negative number, enter natural number: ");
             }
         }
         catch (System.Exception)
         {
-            lengthArray = -1;
+            arrayLength = -1;
             Console.Write("Enter number: ");
         }
-    } while (lengthArray < 1);
+    } while (arrayLength < 1);
 
-    string[] array = new string[lengthArray];
+    string[] array = new string[arrayLength];
     for (int i = 0; i < array.Length; i++)
     {
         Console.Write($"Enter word {i + 1}: ");
