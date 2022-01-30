@@ -1,10 +1,10 @@
 ﻿
 string[] array = new string[0];
 
-int number = EnterNumberChoice();
+int number = ChoiceEnterNumber();
 if (number == 1)
 {
-    array = MethodEnterYourself();
+    array = EnterYourselfMethod();
 }
 else if (number == 2)
 {
@@ -20,12 +20,12 @@ PrintArray(newArray);
 
 
 
-int EnterNumberChoice()
+int ChoiceEnterNumber()
 {
     int number;
     do
     {
-        Console.Write("Enter 1 if you wond enter yourself\n2 for skript\nnumber:  ");
+        Console.Write("Enter 1 if you wont enter yourself\n2 for skript\nnumber:  ");
         string stringNumber = Console.ReadLine();
         try
         {
@@ -47,29 +47,29 @@ int EnterNumberChoice()
 }
 
 
-string[] MethodEnterYourself()
+string[] EnterYourselfMethod()
 {
     Console.Write("Enter array length: ");
-    int arrayLength;
+    int lengthArray;
     do
     {
-        string stringArrayLength = Console.ReadLine();
+        string stringLengthArray = Console.ReadLine();
         try
         {
-            arrayLength = Convert.ToInt32(stringArrayLength);
-            if (arrayLength < 1)
+            lengthArray = Convert.ToInt32(stringLengthArray);
+            if (lengthArray < 1)
             {
                 Console.Write("Array length cannot be negative number, enter natural number: ");
             }
         }
         catch (System.Exception)
         {
-            arrayLength = -1;
+            lengthArray = -1;
             Console.Write("Enter number: ");
         }
-    } while (arrayLength < 1);
+    } while (lengthArray < 1);
 
-    string[] array = new string[arrayLength];
+    string[] array = new string[lengthArray];
     for (int i = 0; i < array.Length; i++)
     {
         Console.Write($"Enter word {i + 1}: ");
@@ -89,13 +89,13 @@ string[] NewArrayMethod(string[] oldArray)
 {
     string sizeWord;
     int sizeNewArray = 0,
-    wordNotLongerThanThree = 3;
+    wordCannotLongerThanThree = 3;
 
     string[] newArray = new string[oldArray.Length];
     for (int row = 0; row < oldArray.Length; row++)
     {
         sizeWord = oldArray[row];
-        if (sizeWord.Length <= wordNotLongerThanThree)
+        if (sizeWord.Length <= wordCannotLongerThanThree)
         {
             newArray[sizeNewArray] = oldArray[row];
             sizeNewArray++;
